@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-2">
+            <div class="col">
+                <h3 class="font-weight-bold mb-4 " >Cadastrar Cliente</h3>
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow"> <i class="fas fa-arrow-alt-from-right mr-2"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-6">
+
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">
+                                Nome <i class="fas fa-user-edit ml-2"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" onchange="change_nome(this.value)" placeholder="Insira o Nome">
+                    </div>
+                
+                    <p></p>
+                    
+                    <div class="input-group mb-3"  >
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">
+                                Sexo <i class="fas fa-venus-mars ml-2"></i> 
+                            </label>
+                        </div>
+                        <select class="custom-select" id="combobox_prod" onchange="change_sexo(this.value)" >
+                            <option selected value="-1" >selecione um sexo</option>
+                            <option value="1" >Masculino</option>
+                            <option value="2" >Feminino</option>
+                            <option value="3" >Outro</option>
+                        </select>
+                    </div>
+                
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                CPF <i class="fas fa-address-card ml-2"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="quant_prod" class="form-control" onchange="change_cpf(this.value)" type="text" placeholder="Adicione o CPF">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                RG <i class="fas fa-id-badge ml-2"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="quant_prod" class="form-control" onchange="change_rg(this.value)" type="text" placeholder="Adicione o RG">
+                    </div>
+                    
+                    <div class="input-group mb-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                Data <i class="fas fa-calendar ml-2"></i>
+                            </span>
+                        </div>
+                        <input id="quant_prod" class="form-control" onchange="change_data_nacimento(this.value)" type="date" placeholder="Data de nacimento">
+                    </div>
+                    
+                    <span class="container badge badge-info mb-3"> <i class="fas fa-info-circle mr-1"></i> Nacimento apartir de 1940</span>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                Telefone <i class="fas fa-phone ml-2"></i>
+                            </span>
+                        </div>
+                        <input id="quant_prod" type="tel" class="form-control" onchange="change_telefone(this.value)" placeholder="Adicione o Telefone">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                E-mail <i class="fas fa-envelope ml-2"></i>
+                            </span>
+                        </div>
+                        <input id="quant_prod" type="email" class="form-control" onchange="change_email(this.value)" placeholder="Adicione o E-mail">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >
+                                Endereço <i class="fas fa-map-marker-alt ml-2"></i>
+                            </span>
+                        </div>
+                        <input id="quant_prod" class="form-control" onchange="change_endereco(this.value)" type="text" placeholder="Adicione o Endereço">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="col-6">
+                
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-">
+                        <h1 class="text-center" >
+                            <i class="far fa-user-circle"></i>
+                        </h1>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-">
+                        <div class="card text-center text-dark" style="width: 18rem;">
+                            <div class="card-body">
+                                
+                                <span class="badge badge-dark">
+                                    <h5 class="card-title mb-0" id="nome_do_cliente" >Nome</h5>
+                                </span>
+
+                                <p class="card-text">
+                                    <div id="mensagem">
+                                        Deseja confirmar o cadastro do(a) Cliente: <div class="border-bottom" id="nome_do_cliente_2" ></div>
+                                    </div>
+                                </p>
+                                
+
+                                <a onclick="adicionar_novo_cliente()" class="btn btn-primary text-white">Cadastrar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+                
+            </div>
+
+        </div>
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>

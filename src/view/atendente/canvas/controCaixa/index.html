@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Controlar Caixa</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>
+    -->
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-4">
+            <div class="col">
+                <h3 class="font-weight-bold mb-1 " >Controlar Caixa</h3>
+                <!--
+                    <span class="badge badge-warning mb-3">
+                        <i class="fas fa-info-circle"></i> O usuário cadastrado podera realizar login em seu dominios.
+                    </span>
+                -->
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow"> <i class="fas fa-arrow-alt-circle-left"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="container" style="width: 120vh;" >
+                
+                    
+                <div class="container">
+                    
+                    <div class="row mb-4">
+                        <h5 class="badge badge-info p-2 container" style="font-size: 18px" >
+                            Situação do Caixa: <span class="badge badge-light ml-2" id="situacao_caixa" >Aberto</span>
+                        </h5>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary container" onclick="abrirOuFecharCaixa()" >Abrir Caixa <i class="fas fa-lock-open ml-2"></i> </button>
+                        </div>
+
+                        <div class="col">
+                            <button type="button" class="btn btn-danger container" onclick="abrirOuFecharCaixa()" >Fechar Caixa <i class="fas fa-lock ml-2"></i> </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>

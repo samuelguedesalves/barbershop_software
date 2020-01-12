@@ -1,0 +1,9 @@
+@import url('../../assets/import_all.css');
+
+body{
+    font-family: CircularStd;
+}
+
+.card{
+    margin:0 auto;
+}

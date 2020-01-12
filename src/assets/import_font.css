@@ -1,0 +1,9 @@
+@font-face{
+    src: url('./fonts/CircularStd-Bold.ttf');
+    font-family: CircularStd;
+}
+
+@font-face{
+    src: url('./fonts/Roboto-Bold.ttf');
+    font-family: RobotoBold;
+}

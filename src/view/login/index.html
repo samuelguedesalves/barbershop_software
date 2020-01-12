@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body class="">
+
+    <div class="p-3 mb-2 bg-dark text-white">
+        <div class="justify-content-center align-items-center row" id="form_de_login" >
+                
+            <div class="form_login">
+                <h3 class="justify-content-center align-items-center row" >LOGIN</h3>
+                <div class="form-group">
+                    <label for="nome_input"> <i class="fas fa-user-alt"></i> Nome do usuário</label>
+                    <input type="text" class="form-control" id="nome_usuario" placeholder="Usuário">
+                    <small id="emailHelp" class="text-warning"> <i class="fas fa-exclamation-triangle"></i> Você deve inserir um usuário valido já cadastrado.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha_input"> <i class="fas fa-unlock"></i> Senha do usuário</label>
+                    <input type="password" class="form-control" id="senha_usuario" placeholder="Senha">
+                </div>
+                
+                <button onclick="capturar_input()" type="button" class="btn btn-success"> <i class="fas fa-sign-in-alt"></i> Login</button>
+                
+            </div>
+        </div>
+
+        <div class="justify-content-center align-items-center row" id="animacao_login" >
+            <h3>Logando...</h3>
+            <div class="spinner-border text-light ml-3" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

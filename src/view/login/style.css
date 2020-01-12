@@ -1,0 +1,27 @@
+@import url('../../assets/import_all.css');
+
+html, body{
+    font-family: CircularStd;
+}
+
+.toptop-frame{
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.justify-content-center{
+    margin-top: 10vh;
+}
+
+.btn-success{
+    width: 100%;
+}
+
+.grid_template{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+#animacao_login{
+    margin-top: 50vh;
+}

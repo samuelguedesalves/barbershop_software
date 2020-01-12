@@ -1,0 +1,12 @@
+@import url('../../../../assets/import_all.css');
+
+body{
+    font-family: CircularStd;
+}
+
+#tabela_de_produto{
+    width: auto;
+    height: 60vh;
+    
+    /* overflow: auto; */
+}

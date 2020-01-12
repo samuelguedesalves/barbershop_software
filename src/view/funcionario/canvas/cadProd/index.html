@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Compra Produto</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>
+    -->
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-2">
+            <div class="col">
+                <h3 class="font-weight-bold mb-4 " >Cadastrar Produto</h3>
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow" id="botao_voltar"> <i class="fas fa-arrow-alt-from-right mr-2"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="col-sm">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >Nome <i class="fad fa-signature ml-2"></i> </span>
+                    </div>    
+                    <input id="quant_prod" type="text" class="form-control" onchange="change_nome(this.value)" placeholder="Nome do produto">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Fornecedor <i class="fas fa-user ml-2"></i> </label>
+                    </div>
+                    <select class="custom-select" id="combobox_forn" onchange="change_fornecedor(this.value)"  >
+                        <option selected value="-1">selecione um fornecedor</option>
+                    </select>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >Valor de compra <i class="fas fa-abacus ml-2"></i> </span>
+                    </div>    
+                    <input id="quant_prod" type="number" class="form-control" onchange="change_compra(this.value)" placeholder="Valor Unitario">
+                </div>
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >Valor de Venda <i class="fas fa-abacus ml-2"></i> </span>
+                    </div>    
+                    <input id="quant_prod" type="number" class="form-control" onchange="change_venda(this.value)" placeholder="Valor Unitario">
+                </div>
+
+                <button type="button" class="btn btn-primary container" onclick="cadastrar_novo_produto()" >
+                    <i class="fas fa-plus mr-2" id="adicionar_botao" ></i>
+                    Adicionar produto
+                    <i class="fas fa-cart-arrow-down ml-2" id="adicionar_botao" ></i>
+                </button>
+            
+            </div>
+        </div>
+
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>

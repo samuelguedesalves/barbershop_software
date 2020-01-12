@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Fornecedor</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>
+    -->
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-4">
+            <div class="col">
+                <h3 class="font-weight-bold mb-1 " >Cadastrar Fornecedor</h3>
+                <!--
+                    <span class="badge badge-warning mb-3">
+                        <i class="fas fa-info-circle"></i> O usuário cadastrado podera realizar login em seu dominios.
+                    </span>
+                -->
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow"> <i class="fas fa-arrow-alt-circle-left"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="container" style="width: 120vh;" >
+                
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Fornecedor <i class="fas fa-user ml-2"></i> </label>
+                        </div>
+                        <input id="nome_forn" type="text" class="form-control" onchange="nomeForn = this.value" value="" placeholder="Diga o nome do fornecedor">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">CNPJ <i class="fas fa-credit-card-blank ml-2"></i> </label>
+                        </div>
+                        <input id="cnpj_forn" type="text" class="form-control" onchange="cnpjForn = this.value" value="" placeholder="Diga o CNPJ do fornecedor">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">CEP <i class="fas fa-map-marker-alt ml-2"></i> </label>
+                        </div>
+                        <input id="cep_forn" type="text" class="form-control" onchange="cepForn = this.value" value="" placeholder="Diga o CEP do fornecedor">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Telefone <i class="fas fa-phone-alt ml-2"></i> </label>
+                        </div>
+                        <input id="tel_forn" type="text" class="form-control" onchange="telefoneForn = this.value" value="" placeholder="Diga o Telefone do fornecedor">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">E-mail <i class="fas fa-envelope ml-2"></i> </label>
+                        </div>
+                        <input id="email_forn" type="text" class="form-control" onchange="emailForn = this.value" value="" placeholder="Diga o E-mail do fornecedor">
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Endereço <i class="fas fa-map-marker-alt ml-2"></i> </label>
+                        </div>
+                        <input id="end_forn" type="text" class="form-control" onchange="enderecoForn = this.value" value="" placeholder="Diga o Endereço do fornecedor. Ex.: Rua, Numero">
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Estado <i class="far fa-globe ml-2"></i> </label>
+                                </div>
+                                <select class="custom-select" id="combobox_estado" onchange="estadoForn = this.value"  >
+                                    <option selected value="-1">selecione um Estado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Cidade <i class="fas fa-flag ml-2"></i> </label>
+                                </div>
+                                <select class="custom-select" id="combobox_cidade" onchange="cidadeForn = this.value"  >
+                                    <option selected value="-1">selecione uma Cidade</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                
+                    <button type="button" class="btn btn-primary container" onclick="verificarDados()" >Cadastrar novo Fornecedor <i class="fas fa-user-plus ml-2"></i> </button>
+
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>

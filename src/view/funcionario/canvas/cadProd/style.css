@@ -1,0 +1,35 @@
+@import url('../../../../assets/import_all.css');
+
+body{
+    font-family: CircularStd;
+}
+
+
+
+/* #adicionar_botao{
+    animation: girar 4s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+} */
+
+/*
+#botao_voltar{
+    animation: aumentar 3s cubic-bezier(0.1, 1.0, 1.0, 0.1) infinite;
+}
+*/
+
+@keyframes girar{
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aumentar {
+    0% {
+        width: 18vh;    
+    }
+    75% {
+        width: 25vh;
+    }
+    100% {
+        width: 18vh;    
+    }
+}

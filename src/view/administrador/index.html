@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="p-3 mb-2 bg-dark text-white">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body class="bg-dark">
+    <div class="container bg-dark">
+        <div class="row">
+            <div class="col-sm text-white">
+                <h3>Administrador</h3> 
+                <h5 class="badge badge-success p-2" style="font-size: 18px" >Menu do Administrador <i class="fas fa-badge-check ml-2"></i> </h5>
+                <p class="text-warning"> <i class="fas fa-exclamation-triangle"></i> Tenha responsabilidade sobre os registros e alterações feitas! Você é um administrador.</p>
+            </div>
+            <div class="col-">
+                <button onclick="window.location.assign('../login/index.html')" type="button" class="btn btn-danger"> <i class="fas fa-door-open"></i> Logout</button>
+            </div>
+        </div>
+        <div class="container p-3" >
+
+            <div class="row">
+                <div class="col">
+                    
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/image/usuario.png" class="card-img-top" alt="cadastrar produto">
+                        <div class="card-body">
+                            <p class="text-dark card-text"  >Cadastrar Usuario: nome, senha...</p>
+                            <a href="canvas/cadUsuario/index.html" class="btn btn-primary container">Cadastrar Usuario <i class="fas fa-users ml-2"></i> </a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/image/fornecedor.png" class="card-img-top" alt="cadastrar cliente">
+                        <div class="card-body">
+                            <p class="text-dark card-text" >Cadastrar Fornecedor: nome, endereço, cnpj.</p>
+                            <a href="canvas/cadFornecedor/index.html" class="btn btn-primary container">Cad. fornecedor <i class="fas fa-truck-loading ml-2"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/image/compra_produto.png" class="card-img-top" alt="cadastrar cliente">
+                        <div class="card-body">
+                            <p class="text-dark card-text" >Comprar produtos, fornecedor, quantidade...</p>
+                            <a href="canvas/compProd/index.html" class="btn btn-primary container">Comprar Produtos  <i class="fas fa-box-open ml-2"></i> </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

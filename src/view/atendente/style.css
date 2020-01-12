@@ -1,0 +1,17 @@
+@import url('../../assets/import_all.css');
+
+body{
+    font-family: CircularStd;
+}
+
+.card{
+    margin:0 auto;
+}
+
+.canvas{
+    height: 50vh;
+}
+
+#navegation_button{
+    width: 500px;
+}

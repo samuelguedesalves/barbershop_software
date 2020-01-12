@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="p-3 mb-2 bg-dark text-white">
+<head>
+    <meta charset="UTF-8">
+    <title>Atendente</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container bg-dark">
+        <div class="row">
+            <div class="col-sm text-white">
+                <h3>Atendente</h3> 
+                <h5 class="badge badge-info p-2" style="font-size: 18px" >Menu do atendente</h5>
+                <p class="text-warning"> <i class="fas fa-exclamation-triangle"></i> Tenha responsabilidade sobre os registros e alterações feitas!</p>
+            </div>
+            <div class="col-">
+                <button onclick="window.location.assign('../login/index.html')" type="button" class="btn btn-danger"> <i class="fas fa-door-open"></i> Logout</button>
+            </div>
+        </div>
+        <div class="container p-3" >
+            
+            <div class="canvas">
+
+                <div class="row" id="primeiro_menu" >
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="../../assets/image/caixa.png" class="card-img-top" alt="controlar caixa">
+                                <div class="card-body">
+                                    <!-- <h5 class="text-dark card-title">Controlar Caixa</h5> -->
+                                    <p class="text-dark card-text" >Cadastre de Caixa, abrir, fechar...</p>
+                                    <a href="./canvas/controCaixa/index.html" class="btn btn-primary container">Controlar Caixa <i class="fas fa-cash-register ml-2"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="../../assets/image/cliente.png" class="card-img-top" alt="cadastrar cliente">
+                                <div class="card-body">
+                                    <!-- <h5 class="text-dark card-title">Cadastrar Cliente</h5> -->
+                                    <p class="text-dark card-text" >Cadastre cliente, nome, endereço, idade, sexo...</p>
+                                    <a href="#" class="btn btn-primary container">Cadastrar Cliente <i class="fas fa-users ml-2"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    
+                <div class="row" id="segundo_menu">
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="../../assets/image/pagamento.png" class="card-img-top" alt="cadastrar cliente">
+                                <div class="card-body">
+                                    <!-- <h5 class="text-dark card-title">Receber vendas</h5> -->
+                                    <p class="text-dark card-text"  >Receber Vendas, receber parcela...</p>
+                                    <a href="#" class="btn btn-primary container">Receber Vendas <i class="far fa-money-bill-alt ml-2"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="../../assets/image/vender.png" class="card-img-top" alt="cadastrar cliente">
+                                <div class="card-body">
+                                    <!-- <h5 class="text-dark card-title">Vender Produtos</h5> -->
+                                    <p class="text-dark card-text"  >Vender produtos, serviços, parcelar...</p>
+                                    <a href="#" class="btn btn-primary container">Vender Produtos <i class="fas fa-shopping-bag ml-2"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            
+            </div>
+
+
+            <div class="container" id="navegation_button">
+                <button class="container btn btn-primary mt-5" id="button_proximo" onclick="proximo_menu()" >Próximo → </button>
+                <button class="container btn btn-primary mt-5" id="button_anterior" onclick="menu_anterior()" > ← Anterior</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

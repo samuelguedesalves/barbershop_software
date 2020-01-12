@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Compra Produto</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>
+    -->
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-2">
+            <div class="col">
+                <h3 class="font-weight-bold mb-1 " >Comprar Produto</h3>
+                
+                <span class="badge badge-warning mb-3">
+                    <i class="fas fa-info-circle"></i> Só pode comprar produtos que já foram cadastrados
+                </span>
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow"> <i class="fas fa-arrow-alt-circle-left"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-6">
+                <!--
+                    <div class="container mb-3">
+                        <button type="button" class="container btn btn-primary" onclick="" > <i class="fas fa-plus mr-2"></i> Iniciar nova Compra</button>
+                    </div>
+                -->
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Fornecedor <i class="fas fa-user"></i> </label>
+                        </div>
+                        <select class="custom-select" id="combobox_forn" onchange="buscar_produtos_do_fornecedor(this.value)"  >
+                            <option selected value="-1">selecione um fornecedor</option>
+                        </select>
+                    </div>
+                
+                    <p></p>
+                    
+                    <div class="input-group mb-3"  >
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Produto <i class="fas fa-box-open"></i> </label>
+                        </div>
+                        <select class="custom-select" id="combobox_prod" >
+                            <option selected value="-1" >selecione um produto</option>
+                        </select>
+                    </div>
+                
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >Quantidade </span>
+                        </div>
+                        
+                        <input id="quant_prod" type="text" class="form-control" type="text" placeholder="Adicione uma quantidade">
+                    </div>
+                
+                
+                    <p></p>
+                
+                    <button type="button" class="btn btn-primary" onclick="adicionar_produto()" >Adicionar produto</button>
+                </div>
+
+            </div>
+            
+            <div class="col-6">
+                    
+                    <div class="container mb-3">
+                        <div class="row">
+                            <div class="col-5">
+
+                                <span class="badge badge-secondary p-2 mb-2">
+                                    Codigo da compra:
+                                    <span class="badge badge-light p-2" id="codigo_compra" >_</span>
+                                </span>
+
+                                <span class="badge badge-success p-2">Itens Adicionados <i class="fas fa-clipboard"></i> </span>
+
+                            </div>
+                            <div class="col-7">
+
+                                    <div class="container" id="adicionando_animacao">
+                                        <div class="row">
+                                            <div class="col-1">
+            
+                                                <div class="spinner-grow text-success spinner-grow-sm" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+            
+                                            </div>
+                                            <div class="col-4">
+                                                        
+                                                <h6>Atualizando...</h6>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="overflow-auto border-bottom border-primary" id="tabela_de_produto" >
+                        <table class="table table-dark">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tabela_produto" >
+                            </tbody>                        
+                        </table>
+                    </div>
+                    
+                    <span class="btn btn-primary mt-2" id="valor_total" >
+                        Valor Total: <span class="badge badge-light" id="contador_total" >0</span>
+                    </span>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>

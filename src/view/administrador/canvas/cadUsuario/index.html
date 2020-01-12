@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 mb-2 bg-dark text-white" >
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        <script src="../../../../assets/jquery/jquery-3.4.1.min.js"></script>
+    -->
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark text-white" id="body_container" >
+
+    <div class="container" >
+
+        <div class="row mb-2">
+            <div class="col">
+                <h3 class="font-weight-bold mb-1 " >Cadastrar Usuário</h3>
+                
+                <span class="badge badge-warning mb-3">
+                    <i class="fas fa-info-circle"></i> O usuário cadastrado podera realizar login em seu dominios.
+                </span>
+            </div>
+            <div class="col-">
+                <button onclick="sair_da_tela()" type="button" class="btn btn-danger shadow"> <i class="fas fa-arrow-alt-circle-left"></i> Voltar</button>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="container" style="width: 120vh;" >
+                
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Usuário <i class="fas fa-user ml-2"></i> </label>
+                        </div>
+                        <input id="nome_usuario" type="text" class="form-control" onchange="nome_usuario = this.value" value="" placeholder="Diga o nome do usuário">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Tipo de Usuário <i class="fas fa-sitemap ml-2"></i> </label>
+                        </div>
+                        <select class="custom-select" id="combobox_tipoUser" onchange="tipo_usuario = this.value"  >
+                            <option selected value="-1">selecione o tipo de Usuário</option>
+                            <option value="0">Atendente</option>
+                            <option value="1">Funcionário</option>
+                            <option value="2">Administrador</option>
+                        </select>
+                    </div>
+
+                    <p></p>
+                    
+                    <div class="input-group mb-3"  >
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Senha <i class="fas fa-lock ml-2"></i> </label>
+                        </div>
+                        <input id="senha_usuario" type="text" class="form-control" onchange="senha_usuario = this.value" value="" placeholder="Diga a Senha do Usuário">
+                    </div>
+                
+                    <div class="input-group mb-3"  >
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Repetir Senha <i class="fas fa-exclamation ml-2"></i> </label>
+                        </div>
+                        <input id="senha_usuario_confirmacao" type="text" class="form-control" onchange="senha_confirmacao_usuario = this.value" value="" placeholder="Repita a Senha">
+                    </div>
+                
+                    <p></p>
+                
+                    <button type="button" class="btn btn-primary container" onclick="validar_dados()" >Cadastrar novo Usuário <i class="fas fa-user-plus ml-2"></i> </button>
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <script>
+        function sair_da_tela (){
+            window.location.assign('../../index.html');
+        }
+    </script>
+
+</body>
+</html>
